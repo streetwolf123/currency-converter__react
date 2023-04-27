@@ -8,3 +8,7 @@ html {
   box-sizing: inherit;
 }
 
+#root {
+  display: flex;
+  justify-content: center;
+}
