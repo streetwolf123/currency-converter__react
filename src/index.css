@@ -8,7 +8,26 @@ html {
   box-sizing: inherit;
 }
 
+
+
+@media (max-width: 767px) {
+  body {
+    width: 767px;
+  }
+}
+
 #root {
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-image: url("./App/background.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+@media (max-width:767px) {
+  #root {
+    min-height: 240vh;
+  }
 }
