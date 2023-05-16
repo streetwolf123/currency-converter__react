@@ -1,17 +1,34 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result/result";
+import { Clock } from "./Clock/clock";
 import "./style.css"
 
 
-const Form = ({ result, countResult }) => {
+const Form = () => {
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(currencies[0].short);
 
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-        countResult(amount, currency)
-    }
+    const [result, setResult] = useState();
+
+  const countResult = (amount, currency) => {
+    const rate = currencies
+      .find(({ short }) => short === currency)
+      .rate
+
+    setResult({
+      sourceAmount: +amount,
+      targetAmount: amount / rate,
+      currency,
+    });
+  }
+
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    countResult(amount, currency)
+}
+
+
     return (
         <form onSubmit={onFormSubmit} className="form">
             <header className="section form__header">
@@ -57,13 +74,18 @@ const Form = ({ result, countResult }) => {
             </div>
 
             <div className="section">
-                <button className="form__button">Oblicz</button>
+                <button
+                    className="form__button"
+                >
+                    Oblicz
+                </button>
 
                 <Result result={result} />
 
             </div>
-
+            <Clock />
         </form>
+         
     )
 
 }
