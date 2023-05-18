@@ -8,7 +8,7 @@ The site was created using react.js and is a function for calculating the face v
 
 ### Page
 
-[Page](https://streetwolf123.github.io/currency-converter__react/)
+[(https://streetwolf123.github.io/currency-converter__react/)](https://streetwolf123.github.io/currency-converter__react/)
 
 
 ![Pictures of website](public/zrzut-ekranu.mov)
