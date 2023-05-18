@@ -6,7 +6,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The site was created using react.js and is a function for calculating the face value from PLN to the currency of your choice available in the options
 
-*[Page](https://streetwolf123.github.io/currency-converter__react/)
+### Page
+
+[Page](https://streetwolf123.github.io/currency-converter__react/)
+
+
 ![Pictures of website](public/zrzut-ekranu.mov)
 
 ### Technologies
