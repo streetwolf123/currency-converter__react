@@ -1,9 +1,10 @@
 .result {
+    text-decoration-line: none;
     color: rgb(7, 7, 40);
-}
-
-@media(max-width: 767px) {
-    .result {
-        font-size: 35px;
-    }
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    text-decoration-line: underline;
+    font-size: 20px;
 }

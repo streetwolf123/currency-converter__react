@@ -31,7 +31,7 @@ const Form = () => {
 
     return (
         <form onSubmit={onFormSubmit} className="form">
-            <header className="section form__header">
+            <header className="form__header">
                 <h1>
                     Przelicznik Walut
                 </h1>

@@ -1,7 +1,7 @@
 .form {
     display: grid;
     grid-template-columns: 600px;
-    grid-template-rows: repeat(6, 80px);
+    grid-template-rows: 50px repeat(5, 80px);
     margin: 30px;
     padding: 10px;
     background-color: rgba(108, 189, 95, 0.874);
@@ -12,10 +12,17 @@
 
 @media(max-width: 767px) {
     .form {
-        grid-template-rows: repeat(5, 150px);
+        grid-template-rows: 100px repeat(4, 150px);
         height: 750px;
         font-size: 25px;
     }
+}
+
+.form__header {
+    display: grid;
+    grid-template-rows: 40px;
+    align-items: center;
+    justify-content: center;
 }
 
 .section {
