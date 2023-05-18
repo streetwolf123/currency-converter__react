@@ -54,12 +54,6 @@
     text-decoration-line: none;
 }
 
-.form__paragraph--result {
-    text-decoration-line: none;
-    color: rgb(7, 7, 40);
-    font-size: 30px;
-}
-
 .form__select {
     min-height: 40px;
     min-width: 200px;

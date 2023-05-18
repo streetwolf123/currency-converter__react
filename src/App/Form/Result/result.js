@@ -1,8 +1,8 @@
-import "../style.css"
+import "./style.css"
 
 export const Result = ({ result }) => {
     return (
-        <p className="form__paragraph form__paragraph--result"> 
+        <p className="result"> 
             {result !== undefined && (
                 <>
                     {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=&nbsp;

@@ -1,0 +1,9 @@
+.result {
+    color: rgb(7, 7, 40);
+}
+
+@media(max-width: 767px) {
+    .result {
+        font-size: 35px;
+    }
+}
