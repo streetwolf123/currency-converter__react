@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import { StyledClock } from "./styled";
 
 export const Clock = () => {
     const time = new Date().toLocaleTimeString();
@@ -23,9 +23,9 @@ export const Clock = () => {
     setInterval(refreshDate);
     
     return (  
-            <div>
+            <StyledClock>
                 Data: {converterDate}&nbsp;&nbsp;
                 Godzina: {converterTime}
-            </div>
+            </StyledClock>
     );
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result/result";
 import { Clock } from "./Clock/clock";
-import { StyledForm, Header, Div, Paragraph, Select, Input, Button } from "./styled";
+import { StyledForm, Header, Div, Paragraph, Select, Input, Button, H1 } from "./styled";
 
 
 const Form = () => {
@@ -31,11 +31,11 @@ const Form = () => {
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
+            <Clock />
             <Header>
-                <h1>
+                <H1>
                     Przelicznik Walut
-                </h1>
-                <Clock />
+                </H1>
             </Header>
             <Div>
                 <Paragraph>
