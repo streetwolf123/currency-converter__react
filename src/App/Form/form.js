@@ -2,7 +2,7 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result/result";
 import { Clock } from "./Clock/clock";
-import "./style.css"
+import { StyledForm, Header, Div, Paragraph, Select, Input, Button } from "./styled";
 
 
 const Form = () => {
@@ -30,29 +30,28 @@ const Form = () => {
 
 
     return (
-        <form onSubmit={onFormSubmit} className="form">
-            <header className="form__header">
+        <StyledForm onSubmit={onFormSubmit}>
+            <Header>
                 <h1>
                     Przelicznik Walut
                 </h1>
-            </header>
-            <div className="section">
-                <p className="form__paragraph">
+                <Clock />
+            </Header>
+            <Div>
+                <Paragraph>
                     Ilość w PLN
-                </p>
-                <input
+                </Paragraph>
+                <Input
                     min={0}
                     value={amount}
                     onChange={({ target }) => setAmount(target.value)}
                     type="number"
-                    className="form__input"
                     required placeholder="Podaj wartość nominału"
                 />
-            </div>
-            <div className="section">
-                <p className="form__paragraph">Waluta</p>
-                <select
-                    className="form__select"
+            </Div>
+            <Div>
+                <Paragraph>Waluta</Paragraph>
+                <Select
                     value={currency}
                     onChange={({ target }) => setCurrency(target.value)}
                 >
@@ -66,25 +65,22 @@ const Form = () => {
                         </option>
 
                     )))}
-                </select>
-            </div>
-            <div className="section">
-                <p className="form__paragraph form__paragraph--choose">Wybrano</p>
-                <p className="form__paragraph form__paragraph--chosen"><strong>{currency}</strong></p>
-            </div>
+                </Select>
+            </Div>
+            <Div>
+                <Paragraph choose>Wybrano</Paragraph>
+                <Paragraph chosen><strong>{currency}</strong></Paragraph>
+            </Div>
 
-            <div className="section">
-                <button
-                    className="form__button"
-                >
+            <Div>
+                <Button>
                     Oblicz
-                </button>
+                </Button>
 
                 <Result result={result} />
 
-            </div>
-            <Clock />
-        </form>
+            </Div>
+        </StyledForm>
          
     )
 

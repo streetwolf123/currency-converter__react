@@ -1,8 +1,8 @@
-import "./style.css"
+import { Paragraph } from "./styled";
 
 export const Result = ({ result }) => {
     return (
-        <p className="result"> 
+        <Paragraph> 
             {result !== undefined && (
                 <>
                     {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=&nbsp;
@@ -11,6 +11,6 @@ export const Result = ({ result }) => {
                     </strong>
                 </>
             )}
-        </p>
+        </Paragraph>
     );
 }

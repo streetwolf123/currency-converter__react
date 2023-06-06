@@ -1,5 +1,6 @@
 import { useState } from "react"
 
+
 export const Clock = () => {
     const time = new Date().toLocaleTimeString();
     const date = new Date().toLocaleDateString();
@@ -19,12 +20,12 @@ export const Clock = () => {
 
     setInterval(refreshTime, 1000);
 
-    setInterval(refreshDate)
-
-    return (
-        <div>
-            Data: {converterDate}&nbsp;&nbsp;
-            Godzina: {converterTime}
-        </div>
-    )
+    setInterval(refreshDate);
+    
+    return (  
+            <div>
+                Data: {converterDate}&nbsp;&nbsp;
+                Godzina: {converterTime}
+            </div>
+    );
 }
