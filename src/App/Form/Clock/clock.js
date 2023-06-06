@@ -5,18 +5,18 @@ export const Clock = () => {
     const time = new Date().toLocaleTimeString();
     const date = new Date().toLocaleDateString();
 
-    const [converterTime, setConverterTime] = useState(time)
-    const [converterDate, setConverterDate] = useState(date)
+    const [converterTime, setConverterTime] = useState(time);
+    const [converterDate, setConverterDate] = useState(date);
 
     const refreshTime = () => {
         const time = new Date().toLocaleTimeString();
         setConverterTime(time)
-    }
+    };
 
     const refreshDate = () => {
         const date = new Date().toLocaleDateString();
         setConverterDate(date)
-    }
+    };
 
     setInterval(refreshTime, 1000);
 
@@ -28,4 +28,4 @@ export const Clock = () => {
                 Godzina: {converterTime}
             </StyledClock>
     );
-}
+};

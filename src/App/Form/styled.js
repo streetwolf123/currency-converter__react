@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 export const StyledForm = styled.form`
     display: grid;
     grid-template-columns: 600px;
-    grid-template-rows: 40px repeat(5, 80px);
+    grid-template-rows: repeat(2, 40px) repeat(5, 80px);
     margin: 30px;
     padding: 10px;
     background-color: rgba(108, 189, 95, 0.874);

@@ -21,13 +21,12 @@ const Form = () => {
       targetAmount: amount / rate,
       currency,
     });
-  }
+  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     countResult(amount, currency)
-}
-
+};
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
